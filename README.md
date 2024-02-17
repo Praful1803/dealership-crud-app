@@ -34,7 +34,8 @@ Add badges from somewhere like: [shields.io](https://shields.io/)
 
 ## Demo
 
-Insert gif or link to demo
+![dealership](https://github.com/Praful1803/dealership-crud-app/assets/100028625/e611f902-8bec-49df-a155-f2f57c8c5559)
+
 
 
 ## Deployment
