@@ -1,0 +1,106 @@
+<div class="container">
+  <h1>Dealrships</h1>
+<div class="row">
+  <div class="d-flex justify-content-between">
+    <input [(ngModel)]="search" (input)="filterDealers()" class="border p-1 rounded" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-primary rounded-pill" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa-solid fa-plus"></i>Add Dealer</button>
+  </div>
+</div>
+<table class="table mt-3 table-bordered">
+  <thead class="thead-dark">
+    <tr class="text-center">
+      <th scope="col">Sr.No</th>
+      <th scope="col">Name</th>
+      <th scope="col">Amount of Cars</th>
+      <th scope="col">Total Budget</th>
+      <th scope="col">Remaining Budget</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="text-center" *ngFor="let dealer of data; index as i">
+      <th scope="row">{{i+1}}</th>
+      <td>{{dealer.name}}</td>
+      <td>{{dealer.cars ? dealer.cars.length : 0}}</td>
+      <td>${{dealer.totalBudget}}</td>
+      <td>${{ dealer.remainingBudget ?? 0 }}</td>
+      <td>
+        <button (click)="navigate(dealer)" class="btn btn-info rounded-pill mr-1"><i class="fa-solid fa-eye"></i>View</button>
+        <button (click)="editDealers(dealer)" class="btn btn-success rounded-pill mr-1" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa-solid fa-pen"></i>Edit</button>
+        <button (click)="deleteDealers(dealer.id)" class="btn btn-danger rounded-pill"><i class="fa-solid fa-trash"></i>Delete</button>
+      </td>
+    </tr>
+    <tr class="text-center" *ngIf="data.length===0">
+      <td colspan="6">No Dealer Data Available!</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+ <!-- Add Dealer Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="d-flex flex-column">
+          <h4 class="modal-title" id="exampleModalLongTitle">Add Dealer</h4>
+          <span>All fields are mandatory.</span>
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="Form">
+          <div class="form-group row">
+            <label for="dealers" class="col-sm-5 col-form-label">
+              Dealer's Name
+            </label>
+            <div class="col-sm-7">
+              <input formControlName="name" name="dealer-name" type="text" class="form-control" id="dealers" placeholder="Dealer's Name" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-5 col-form-label">
+              Location
+            </label>
+            <div class="col-sm">
+              <input formControlName="lan" name="lan" type="text" class="form-control" placeholder="Lat" required>
+            </div>
+            <div class="col-sm">
+              <input formControlName="long" name="long" type="text" type="text" class="form-control" placeholder="Long" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="budget" class="col-sm-5 col-form-label">
+              Total Budget
+            </label>
+            <div class="col-sm-7">
+              <input formControlName="totalBudget" name="total" type="text" type="text" class="form-control" id="budget" placeholder="$0.00" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="owner-first" class="col-sm-5 col-form-label">
+              Owner's First Name
+            </label>
+            <div class="col-sm-7">
+              <input formControlName="firstName" name="own-name" type="text" class="form-control" id="owner-first" placeholder="First Name" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="owner-last" class="col-sm-5 col-form-label">
+              Owner's Last Name
+            </label>
+            <div class="col-sm-7">
+              <input formControlName="lastName" name="own-last" type="text" class="form-control" id="owner-last" placeholder="Last Name" required>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button (click)="onSubmit()" type="button" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

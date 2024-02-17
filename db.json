@@ -1,0 +1,146 @@
+{
+  "dealers": [
+    {
+      "id": "94df",
+      "name": "Tesla",
+      "lan": "4354",
+      "long": "3434",
+      "totalBudget": "7676",
+      "firstName": "Elon",
+      "lastName": "Musk"
+    },
+    {
+      "id": "37f8",
+      "name": "celerio",
+      "lan": "534",
+      "long": "544",
+      "totalBudget": "5493",
+      "firstName": "Ratan",
+      "lastName": "Tata"
+    },
+    {
+      "id": "5991",
+      "name": "Mahindra",
+      "lan": "534",
+      "long": "544",
+      "totalBudget": "5493",
+      "firstName": "Anand",
+      "lastName": "Mahindra"
+    },
+    {
+      "id": "6a33",
+      "name": "Renault Group",
+      "lan": "5657",
+      "long": "4322",
+      "totalBudget": "7868",
+      "firstName": "Louis",
+      "lastName": "Renault"
+    },
+    {
+      "id": "f568",
+      "name": "Skoda",
+      "lan": "6655",
+      "long": "6754",
+      "totalBudget": "8908",
+      "firstName": "Piyush",
+      "lastName": "Arora"
+    },
+    {
+      "id": "639a",
+      "name": "Nissan",
+      "lan": "7654",
+      "long": "8763",
+      "totalBudget": "5653",
+      "firstName": "Makota",
+      "lastName": "Uchida"
+    },
+    {
+      "id": "3295",
+      "name": "Ola",
+      "lan": "7686",
+      "long": "2342",
+      "totalBudget": "4324",
+      "firstName": "Toshihiro",
+      "lastName": "Suzuki"
+    },
+    {
+      "id": "ce39",
+      "name": "Honda",
+      "lan": "534",
+      "long": "544",
+      "totalBudget": "5493",
+      "firstName": "Ratan",
+      "lastName": "Tata"
+    },
+    {
+      "id": "c588",
+      "name": "Hero",
+      "lan": "534",
+      "long": "544",
+      "totalBudget": "5493",
+      "firstName": "Ratan",
+      "lastName": "Tata"
+    },
+    {
+      "id": "5893",
+      "name": "Uber",
+      "lan": "534",
+      "long": "544",
+      "totalBudget": "5493",
+      "firstName": "uber",
+      "lastName": "ram"
+    },
+    {
+      "id": "d292",
+      "name": "Dzire",
+      "lan": "534",
+      "long": "544",
+      "totalBudget": "5493",
+      "firstName": "Ratan",
+      "lastName": "Tata"
+    },
+    {
+      "id": null,
+      "name": "Maruti",
+      "lan": "0954",
+      "long": "3298",
+      "totalBudget": "0943",
+      "firstName": "Chetan",
+      "lastName": "Jogi"
+    }
+  ],
+  "cars": [
+    {
+      "id": "1af8",
+      "name": "",
+      "model": "Brezza",
+      "brand": "Maruti Suzuki",
+      "color": "Brown",
+      "price": "6565"
+    },
+    {
+      "id": "ec5f",
+      "name": "",
+      "model": "Nano",
+      "brand": "Tata Motors",
+      "color": "Yellow",
+      "price": "2822"
+    },
+    {
+      "id": "79a7",
+      "name": "",
+      "model": "Baleno",
+      "brand": "Maruti Suzuki",
+      "color": "Green",
+      "price": "7565"
+    },
+    {
+      "id": "",
+      "name": "",
+      "model": "Celerio",
+      "brand": "Maruti Suzuki",
+      "color": "Black",
+      "price": "5643"
+    }
+  ]
+}

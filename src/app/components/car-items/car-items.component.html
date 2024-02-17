@@ -1,0 +1,97 @@
+<div class="container">
+  <h1>Dealrships : <span></span></h1>
+<div class="row">
+  <div class="d-flex justify-content-between">
+    <input [(ngModel)]="searchCar" (input)="filterCars()" class="border p-1 rounded" type="search" placeholder="Search" aria-label="Search">
+    <div class="d-flex">
+      <button class="btn btn-primary rounded-pill mr-2" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa-solid fa-plus"></i>Add Car</button>
+      <button routerLink="/" class="btn btn-primary rounded-pill"><i class="fa-solid fa-arrow-left"></i>Back</button>
+    </div>
+  </div>
+</div>
+<table class="table mt-3 table-bordered">
+  <thead class="thead-dark">
+    <tr class="text-center">
+      <th scope="col">Sr.No</th>
+      <th scope="col">Brand</th>
+      <th scope="col">Model</th>
+      <th scope="col">Color</th>
+      <th scope="col">Price</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="text-center" *ngFor="let car of carData; index as i">
+      <th scope="row">{{i+1}}</th>
+      <td>{{car.brand}}</td>
+      <td>{{car.model}}</td>
+      <td>{{car.color}}</td>
+      <td>${{car.price}}</td>
+      <td>
+        <button (click)="editCar(car)" class="btn btn-success rounded-pill mr-1" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa-solid fa-pen"></i>Edit</button>
+        <button (click)="deleteCar(car.id)" class="btn btn-danger rounded-pill"><i class="fa-solid fa-trash"></i>Delete</button>
+      </td>
+    </tr>
+    <tr *ngIf="carData.length===0" class="text-center">
+      <td colspan="6">No Cars Data Available!</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+ <!-- Add Car Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="d-flex flex-column">
+          <h4 class="modal-title" id="exampleModalLongTitle">Add Car</h4>
+          <span>All fields are mandatory.</span>
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="Form">
+          <div class="form-group row">
+            <label for="brand" class="col-sm-5 col-form-label">
+              Brand
+            </label>
+            <div class="col-sm-7">
+              <input formControlName="brand" name="brand" type="text" class="form-control" id="brand" placeholder="Brand's Name" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="model" class="col-sm-5 col-form-label">
+              Model
+            </label>
+            <div class="col-sm-7">
+              <input formControlName="model" name="model" type="text" class="form-control" id="model" placeholder="Model" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="color" class="col-sm-5 col-form-label">
+              Color
+            </label>
+            <div class="col-sm-7">
+              <input formControlName="color" name="color" type="text" class="form-control" id="color" placeholder="Color" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="price" class="col-sm-5 col-form-label">
+              Price
+            </label>
+            <div class="col-sm-7">
+              <input formControlName="price" name="price" type="text" class="form-control" id="price" placeholder="$0.00" required>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button (click)="onSubmit()" type="button" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
