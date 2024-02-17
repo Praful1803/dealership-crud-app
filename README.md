@@ -1,27 +1,47 @@
-# CrudApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.5.
+# Angular CRUD App with JSON Server
 
-## Development server
+This project is a simple CRUD (Create, Read, Update, Delete) application built with Angular, Bootstrap, and JSON Server. It allows users to manage a list of dealers and their associated car information.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# Features
 
-## Code scaffolding
+View the list of dealers along with their cars.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Add new dealers.
 
-## Build
+Edit existing dealer information.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Delete dealers.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Setup
 
-## Running end-to-end tests
+clone the repository: git clone
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Install Dependencies: npm install
 
-## Further help
+Run JSON Server: json-server db.json
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Run Angular App: ng serve
+## Badges
+
+Add badges from somewhere like: [shields.io](https://shields.io/)
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
+
+
+## Demo
+
+Insert gif or link to demo
+
+
+## Deployment
+
+To deploy this project run
+
+```bash
+  npm run deploy
+```
+
